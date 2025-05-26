@@ -1,0 +1,90 @@
+---
+title: "Untitled"
+author: "Nhu Ho"
+date: "2025-05-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+#install.packages("plotly")
+library(plotly)
+
+```
+
+```{r}
+df <- read.csv("Data/FE_reviews.csv", stringsAsFactors = FALSE)
+
+df %>%
+  group_by(recommended_ind) %>%
+  summarise(
+    mean_rating = mean(rating, na.rm=TRUE),
+    sd_rating = sd(rating, na.rm=TRUE),
+    n = n()
+  )
+
+```
+```{r}
+# t-test 
+t_test_result <- t.test(rating ~ recommended_ind, data = df)
+print(t_test_result)
+
+```
+```{r}
+fig <- plot_ly(df, x = ~age, y = ~rating, color = ~factor(recommended_ind),
+               colors = c('red', 'green'),
+               type = 'scatter', mode = 'markers',
+               marker = list(size = 10, opacity = 0.7)) %>%
+  layout(title = 'Age vs Rating by Recommendation',
+         xaxis = list(title = 'Age'),
+         yaxis = list(title = 'Rating'))
+
+fig
+```
+
+```{r}
+#install.packages("pheatmap")
+library(pheatmap)
+
+numeric_data <- df %>% select_if(is.numeric)
+cor_mat <- cor(numeric_data, use = "pairwise.complete.obs")
+
+pheatmap(cor_mat,
+         clustering_distance_rows = "correlation",
+         clustering_distance_cols = "correlation",
+         clustering_method = "complete",
+         color = colorRampPalette(c("navy", "white", "firebrick3"))(50),
+         main = "Correlation Heatmap with Clustering")
+
+```
+```{r}
+#install.packages("GGally")
+library(GGally)
+
+ggpairs(df, columns = c("age", "rating", "positive_feedback_count", "review_length"),
+        aes(color = factor(recommended_ind), alpha = 0.5)) +
+  theme_minimal()
+
+```
+```{r}
+#install.packages("ggridges")
+library(ggridges)
+
+ggplot(df, aes(x = rating, y = factor(recommended_ind), fill = factor(recommended_ind))) +
+  geom_density_ridges(alpha = 0.7) +
+  labs(title = "Ridgeline Plot: Rating Distribution by Recommendation",
+       x = "Rating", y = "Recommended Ind") +
+  theme_ridges()
+
+
+```
+
+```{r}
+ggplot(df, aes(x = review_length)) +
+  geom_histogram(binwidth = 10, fill = "purple", color = "black") +
+  labs(title = "Distribution of Review Length", x = "Review Length (words/characters)", y = "Frequency") +
+  theme_minimal()
+
+```
