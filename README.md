@@ -76,11 +76,11 @@ The tuned Random Forest model in this project demonstrates strong performance on
 | **ROC AUC** | Not directly reported for RF Project #1               | **0.9899**             |
 | **F1-score (Class 0)** | Not individually reported                             | **0.87**               |
 | **F1-score (Class 1)** | Not individually reported                             | **0.97**               |
-| **Recall (Class 0)** | ~0.942 (estimated from CM)                            | **0.92**               |
-| **Recall (Class 1)** | ~0.931 (estimated from CM)                            | **0.96**               |
-| **Precision (Class 0)** | ~0.749 (estimated from CM)                            | **0.83**               |
-| **Precision (Class 1)** | ~0.987 (estimated from CM)                            | **0.98**               |
-| **Total Test Samples** | 7046 (inferred from original CM)                      | 3874                    |
+| **Recall (Class 0)** | ~0.942                           | **0.92**               |
+| **Recall (Class 1)** | ~0.931                             | **0.96**               |
+| **Precision (Class 0)** | ~0.749                             | **0.83**               |
+| **Precision (Class 1)** | ~0.987                         | **0.98**               |
+| **Total Test Samples** | 7046                     | 3874                    |
 
 *Note: Precision/Recall for the original project are estimated from its provided Confusion Matrix and may not be exact without per-class support figures.*
 
