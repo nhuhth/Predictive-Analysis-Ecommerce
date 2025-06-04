@@ -82,7 +82,6 @@ The tuned Random Forest model in this project demonstrates strong performance on
 | **Precision (Class 1)** | ~0.987                         | **0.98**               |
 | **Total Test Samples** | 7046                     | 3874                    |
 
-*Note: Precision/Recall for the original project are estimated from its provided Confusion Matrix and may not be exact without per-class support figures.*
 
 *Reasons for improved performance in this project likely include:*
 * **Higher Quality Input Data:** More rigorous data cleaning and filtering (e.g., removing inconsistent recommendations) led to a cleaner dataset for modeling.
