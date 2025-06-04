@@ -1,5 +1,3 @@
-# Reproducible Research project in E-commerce
-
 # Predictive Analysis in E-commerce: A Reproducible Research and Enhancement of Product Recommendation
 
 This data science project focuses on building a predictive model to determine whether a customer will recommend a product, based on review data from an online clothing retailer. This project is a **fork, reproduction, and enhancement** of janhavi-giri's [Predictive Analysis Ecommerce](https://github.com/janhavi-giri/Predictive-Analysis-Ecommerce) project. This version can be found at: [https://github.com/abdiyimer/Predictive-Analysis-Ecommerce](https://github.com/abdiyimer/Predictive-Analysis-Ecommerce). This project places special emphasis on **enhancing reproducibility, applying more detailed data processing and feature engineering techniques, and systematically optimizing the model.**
