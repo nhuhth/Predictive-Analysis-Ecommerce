@@ -97,6 +97,7 @@ While the test set size in this project (3,874 samples ) is smaller than that in
     * `DP_FE.ipynb`: Handles all data cleaning, EDA, text preprocessing, and feature engineering. It outputs intermediate CSV files.
     * `FS_Model.ipynb`: Uses the output from the first notebook for feature selection, model building, tuning, and evaluation.
 * **Intermediate Data:** Saving `FE_reviews_train.csv` and `FE_reviews_test.csv`  allows for modularity and re-running parts of the pipeline independently.
+* **Development Practice:** AI tools were utilized to assist with code checking and refinement during the development process of this fork. (ChatGPT, Copilot)
 
 ## Results (This Project)
 
@@ -131,7 +132,7 @@ The refined Random Forest model, developed through a detailed and reproducible w
     cd Predictive-Analysis-Ecommerce 
     ```
 
-2.  **Set up Environment:**
+**Set up Environment:**
     It is recommended to create a virtual environment:
     ```bash
     python -m venv venv
