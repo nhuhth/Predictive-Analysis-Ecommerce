@@ -34,7 +34,7 @@ The primary goal is to construct an effective binary classification model to pre
 * Rigorous building, training, and hyperparameter tuning of a Random Forest model.
 * Comprehensive model evaluation.
 
-The entire process is designed for easy reproducibility, with steps clearly documented in Jupyter notebooks (`DP_FE2.ipynb` and `FS_Model.ipynb`) and intermediate datasets saved.
+The entire process is designed for easy reproducibility, with steps clearly documented in Jupyter notebooks (`DP_FE.ipynb` and `FS_Model.ipynb`) and intermediate datasets saved.
 
 ## Methodology (Reproducible and Improved Workflow)
 
@@ -166,6 +166,6 @@ The refined Random Forest model, developed through a detailed and reproducible w
     * **Step 1:** Open and run all cells in `DP_FE.ipynb`. This will perform EDA, preprocessing, feature engineering, and save `Data/FE_reviews_train.csv` and `Data/FE_reviews_test.csv`.
     * **Step 2:** Open and run all cells in `FS_Model.ipynb`. This will load the processed data, perform feature selection, train, tune, and evaluate the model.
 
-5.  **Verify Outputs:** The results, including model performance metrics and visualizations, will be displayed within the `FS_Model_1.ipynb` notebook and should align with those reported in this README.
+5.  **Verify Outputs:** The results, including model performance metrics and visualizations, will be displayed within the `FS_Model.ipynb` notebook and should align with those reported in this README.
 
 ---
